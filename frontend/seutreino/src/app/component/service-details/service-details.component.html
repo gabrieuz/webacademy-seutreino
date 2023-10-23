@@ -1,0 +1,221 @@
+<!-- Bootstrap 5 JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+<!-- Stepper JavaScript -->
+<script>
+    const stepButtons = document.querySelectorAll('.step-button');
+    const progress = document.querySelector('#progress');
+
+    Array.from(stepButtons).forEach((button, index) => {
+        button.addEventListener('click', () => {
+            progress.setAttribute('value', index * 100 / (stepButtons.length - 1));
+
+            stepButtons.forEach((item, secindex) => {
+                if (index > secindex) {
+                    item.classList.add('done');
+                }
+                if (index < secindex) {
+                    item.classList.remove('done');
+                }
+            })
+        })
+    })
+</script>
+<app-navbaron></app-navbaron>
+<div class="container">
+    <div class="card col-md-8 col-sm-10 col-12">
+        <div class="card-body ">
+            <div class="accordion" id="accordionExample">
+                <div class="steps">
+                    <progress id="progress" value=0 max=100></progress>
+                    <div class="step-item">
+                        <button class="step-button text-center" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1
+                        </button>
+                        <div class="step-title">
+                            Informações do serviço
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2
+                        </button>
+                        <div class="step-title">
+                            Endereço
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            3
+                        </button>
+                        <div class="step-title">
+                            Descrições adicionais
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="card-body">
+                            <label for="">Informações do serviço</label>
+                            <div class="form-field col-lg-12">
+                                <label class="label label-text" for="title">Titulo:</label>
+                                <input id="title" class="form-control input-text" type="text" name="title" required
+                                    [(ngModel)]="record.title">
+                            </div>
+                            <div class="form-field col-lg-12">
+                                <label class="label label-text" for="">Profissão:</label>
+                                <select id="profession" class="form-select" name="profession"
+                                    [(ngModel)]="record.professionId">
+                                    <option class="label" value="null"></option>
+                                    <option class="label" *ngFor="let profession of professions"
+                                        value="{{profession.id}}">
+                                        {{profession.name}}</option>
+                                </select>
+                            </div>
+                            <!--Especialdiades não e para ser um checkbutton ou um para selecionar varios?-->
+                            <div class="form-field col-lg-12">
+                                <label class="label label-text" for="">Especialidades:</label>
+                                <select id="expertises" class="form-select" name="expertises"
+                                    [(ngModel)]="record.expertises">
+                                    <option class="label" value="null"></option>
+                                    <option class="label" *ngFor="let expertise of expertises" value="{{expertise.id}}">
+                                        {{expertise.name}}</option>
+                                </select>
+                            </div>
+
+
+                            <hr class="hr">
+
+                            <label>Espeficação do cliente</label>
+                            <div class="form-field col-lg-12">
+                                <label class="label label-text" for="gender">Nivel de experiência do
+                                    cliente:</label>
+                                <select id="levels" class="form-select" name="levels" [(ngModel)]="record.levels">
+                                    <option class="label" value="null"></option>
+                                    <option class="label" *ngFor="let level of levels" value="{{level.id}}">
+                                        {{level.name}}</option>
+                                </select>
+                            </div>
+                            <div class="row justify-content-between">
+                                <button type="button" class="btn" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="true"
+                                    aria-controls="collapseOne">Avançar <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="form-field col-lg-12">
+                                <label class="label label-text" for="cep">Cep:</label>
+                                <input id="cep" class="form-control input-text" type="text" name="cep" required
+                                    [(ngModel)]="record.cep">
+                            </div>
+                            <div class="form-field col-lg-12">
+                                <label class="label label-text" for="city">Cidade:</label>
+                                <input id="city" class="form-control input-text" type="text" name="city" required
+                                    [(ngModel)]="record.city">
+                            </div>
+                            <div class="form-field col-lg-12" id="form-announcement">
+                                <label class="label select-input label-text" for="state">Estado:</label>
+                                <select id="state" class="form-select" name="state" [(ngModel)]="record.state">
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field col-lg-12">
+                                <label class="label label-text" for="road">Rua:</label>
+                                <input id="street" class="form-control input-text" type="text" name="street" required
+                                    [(ngModel)]="record.street">
+                            </div>
+                            <div class="form-field col-lg-12">
+                                <label class="label label-text" for="">Data de expiração do anuncio:</label>
+                                <input id="expiredAt" class="form-control input-text" type="date" name="expiredAt"
+                                    required [(ngModel)]="record.expiredAt">
+                            </div>
+                            <div class="row justify-content-between">
+                                <button type="button" class="btn" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i
+                                        class="fa-solid fa-arrow-left"></i>
+                                    Voltar</button>
+                                <button type="button" class="btn" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="true"
+                                    aria-controls="collapseOne">Avançar <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="form-field col-lg-12">
+                                <label class="label label-text" for="road">Preço:</label>
+                                <input id="price" class="form-control input-text" type="number" name="price" required
+                                    [(ngModel)]="record.price">
+                            </div>
+                            <div class="form-field col-lg-12">
+                                <label class="label label-text" for="gallery" id="gallery" name="gallery">Galeria de
+                                    urls</label>
+                                <br>
+                                <input type="text" [(ngModel)]="record.gallery">
+
+                            </div>
+                            <div class="form-field col-lg-12">
+                                <label for="" class="form-label label-text">Descrição geral:</label>
+                                <textarea class="form-control" id="description" rows="3" name="description"
+                                    [(ngModel)]="record.description"></textarea>
+                            </div>
+                            <div class="row justify-content-between">
+                                <button type="button" class="btn" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne"><i
+                                        class="fa-solid fa-arrow-left"></i>
+                                    Voltar</button>
+                                <button type="submit" class="btn submit-btn" (click)="submit()">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

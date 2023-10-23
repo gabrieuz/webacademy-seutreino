@@ -1,0 +1,774 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>seutreino documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">seutreino documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  NavbaronComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/component/navbaron/navbaron.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-navbaron</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./navbaron.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./navbaron.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isMenuOpen" >isMenuOpen</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#closeNavbar" >closeNavbar</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#toggleNavbar" >toggleNavbar</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeNavbar"></a>
+                    <span class="name">
+                        <span ><b>closeNavbar</b></span>
+                        <a href="#closeNavbar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeNavbar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/component/navbaron/navbaron.component.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/app/component/navbaron/navbaron.component.ts:12</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleNavbar"></a>
+                    <span class="name">
+                        <span ><b>toggleNavbar</b></span>
+                        <a href="#toggleNavbar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleNavbar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/component/navbaron/navbaron.component.ts:16</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isMenuOpen"></a>
+                    <span class="name">
+                        <span ><b>isMenuOpen</b></span>
+                        <a href="#isMenuOpen"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/component/navbaron/navbaron.component.ts:10</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewEncapsulation } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-navbaron&#x27;,
+  templateUrl: &#x27;./navbaron.component.html&#x27;,
+  styleUrls: [&#x27;./navbaron.component.css&#x27;],
+  encapsulation: ViewEncapsulation.None
+})
+export class NavbaronComponent implements OnInit {
+  isMenuOpen: boolean &#x3D; false;
+
+  ngOnInit() {
+    // O restante do seu código aqui...
+  }
+
+  toggleNavbar() {
+    const nav &#x3D; document.getElementById(&#x27;nav-bar&#x27;);
+    const icon &#x3D; document.getElementById(&#x27;header-toggle&#x27;);
+
+    if (nav &amp;&amp; icon) {
+      nav.classList.toggle(&#x27;show&#x27;);
+      this.isMenuOpen &#x3D; !this.isMenuOpen;
+
+      if (this.isMenuOpen) {
+        icon.classList.remove(&#x27;bx-menu&#x27;);
+        icon.classList.add(&#x27;bx-x&#x27;);
+      } else {
+        icon.classList.remove(&#x27;bx-x&#x27;);
+        icon.classList.add(&#x27;bx-menu&#x27;);
+      }
+    }
+  }
+
+  closeNavbar() {
+    const nav &#x3D; document.getElementById(&#x27;nav-bar&#x27;);
+
+    if (nav &amp;&amp; nav.classList.contains(&#x27;show&#x27;)) {
+      nav.classList.remove(&#x27;show&#x27;);
+      this.isMenuOpen &#x3D; false;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;content&quot;&gt;
+  &lt;div class&#x3D;&quot;header shadow&quot; id&#x3D;&quot;header&quot;&gt;
+    &lt;div class&#x3D;&quot;header_toggle&quot; (click)&#x3D;&quot;toggleNavbar()&quot;&gt;
+      &lt;i class&#x3D;&quot;bx&quot; [class.bx-menu]&#x3D;&quot;!isMenuOpen&quot; [class.bx-x]&#x3D;&quot;isMenuOpen&quot; id&#x3D;&quot;header-toggle&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;header_user_and_notification&quot;&gt;
+      &lt;div class&#x3D;&quot;header_notification&quot;&gt;
+        &lt;i class&#x3D;&quot;bx bx-bell&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;header_user&quot;&gt;
+        &lt;i class&#x3D;&quot;fa-solid fa-user-circle&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;l-navbar&quot; id&#x3D;&quot;nav-bar&quot;&gt;
+    &lt;nav class&#x3D;&quot;nav&quot;&gt;
+      &lt;div&gt;
+        &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nav_logo&quot;&gt;
+          &lt;i class&#x3D;&quot;fa-solid fa-dumbbell&quot;&gt;&lt;/i&gt;
+          &lt;span class&#x3D;&quot;nav_logo-name&quot;&gt;SeuTreino&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;div class&#x3D;&quot;nav_list&quot;&gt;
+          &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nav_link active&quot;&gt;
+            &lt;i class&#x3D;&quot;fa-solid fa-house-chimney&quot;&gt;&lt;/i&gt;
+            &lt;span class&#x3D;&quot;nav_name&quot;&gt;Home&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a routerLink&#x3D;&quot;/profile-professional&quot; class&#x3D;&quot;nav_link&quot;&gt;
+            &lt;i class&#x3D;&quot;fa-solid fa-calendar-days&quot;&gt;&lt;/i&gt;
+            &lt;span class&#x3D;&quot;nav_name&quot;&gt;Minha Agenda&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a routerLink&#x3D;&quot;/search-result&quot; class&#x3D;&quot;nav_link&quot;&gt;
+            &lt;i class&#x3D;&quot;fa-solid fa-magnifying-glass&quot;&gt;&lt;/i&gt;
+            &lt;span class&#x3D;&quot;nav_name&quot;&gt;Serviços&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nav_link&quot;&gt;
+            &lt;i class&#x3D;&quot;fa-solid fa-circle-info&quot;&gt;&lt;/i&gt;
+            &lt;span class&#x3D;&quot;nav_name&quot;&gt;Sobre&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a href&#x3D;&quot;/contactus&quot; class&#x3D;&quot;nav_link&quot;&gt;
+            &lt;i class&#x3D;&quot;fa-solid fa-envelope&quot;&gt;&lt;/i&gt;
+            &lt;span class&#x3D;&quot;nav_name&quot;&gt;Contatos&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;a routerLink&#x3D;&quot;/profile-professional&quot; class&#x3D;&quot;nav_link&quot;&gt;
+            &lt;i class&#x3D;&quot;fa-solid fa-user&quot;&gt;&lt;/i&gt;
+            &lt;span class&#x3D;&quot;nav_name&quot;&gt;Contatos&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nav_link&quot;&gt;
+        &lt;i class&#x3D;&quot;bx bx-log-out nav_icon&quot;&gt;&lt;/i&gt;
+        &lt;span class&#x3D;&quot;nav_name&quot;&gt;SignOut&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./navbaron.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import url(&quot;https://fonts.googleapis.com/css2?family&#x3D;Nunito:wght@400;600;700&amp;display&#x3D;swap&quot;);
+
+:root {
+    --header-height: 3rem;
+    --nav-width: 68px;
+    --first-color: #2C2C2C;
+    --first-color-light: #F28A2E;
+    --white-color: #F28A2E;
+    --normal-font-size: 1rem;
+    --z-fixed: 100;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+.content {
+    margin-top: var(--header-height); /* Margem igual à altura do header */
+    padding-left: var(--nav-width); /* Preenchimento igual à largura do menu lateral */
+  }
+  .content .body-pd {
+    padding-left: var(--nav-width); /* Preenchimento igual à largura do menu lateral */
+  }
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 1rem);
+  }
+  
+.header {
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: var(--white-color);
+    z-index: var(--z-fixed);
+    transition: .5s;
+
+}
+
+.header_user_and_notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_user,
+.header_notification {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Adicione margem direita entre os ícones se desejar */
+}
+
+.header_user i,
+.header_notification i {
+  font-size: 1.5rem; /* Ajuste o tamanho do ícone conforme necessário */
+}
+.bx-x {
+    margin-left: 70px;
+  }
+  
+
+.header_toggle {
+    color: var(--first-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.header_img {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header_img img {
+    width: 40px;
+}
+
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: -30%;
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: var(--first-color);
+    padding: .5rem 1rem 0 0;
+    transition: .5s;
+    z-index: var(--z-fixed);
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav_logo, .nav_link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: .5rem 0 .5rem 1.5rem;
+}
+
+.nav_logo {
+    margin-bottom: 2rem;
+}
+
+.nav_logo-icon {
+    font-size: 1.25rem;
+    color: var(--white-color);
+}
+.nav_logo i {
+  color: #F28A2E;
+}
+.nav_logo-name {
+    color: var(--white-color);
+    font-weight: 700;
+}
+
+.nav_link {
+    position: relative;
+    color: var(--first-color-light);
+    margin-bottom: 1.5rem;
+    transition: .3s;
+}
+
+.nav_link:hover {
+    color: var(--white-color);
+}
+
+.nav_icon {
+    font-size: 1.25rem;
+}
+
+.show {
+    left: 0;
+}
+
+.body-pd {
+    padding-left: calc(var(--nav-width) + 10rem);
+}
+
+.active {
+    color: var(--white-color);
+}
+
+.active::before {
+    content: &#x27;&#x27;;
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 32px;
+    background-color: var(--white-color);
+}
+
+.height-100 {
+    height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: calc(var(--header-height) + 1rem) 0 0 0;
+        padding-left: calc(var(--nav-width) + 2rem);
+    }
+
+    .header {
+        height: calc(var(--header-height) + 1rem);
+        padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+    }
+
+    .header_img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header_img img {
+        width: 45px;
+    }
+
+    .l-navbar {
+        left: 0;
+        padding: 1rem 1rem 0 0;
+    }
+
+    .show {
+        width: calc(var(--nav-width) + 156px);
+    }
+
+    .body-pd {
+        padding-left: calc(var(--nav-width) + 188px);
+    }
+    .bx-x {
+        margin-left: 150px;
+      }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="content">  <div class="header shadow" id="header">    <div class="header_toggle" (click)="toggleNavbar()">      <i class="bx" [class.bx-menu]="!isMenuOpen" [class.bx-x]="isMenuOpen" id="header-toggle"></i>    </div>    <div class="header_user_and_notification">      <div class="header_notification">        <i class="bx bx-bell"></i>      </div>      <div class="header_user">        <i class="fa-solid fa-user-circle"></i>      </div>    </div>  </div>  <div class="l-navbar" id="nav-bar">    <nav class="nav">      <div>        <a href="#" class="nav_logo">          <i class="fa-solid fa-dumbbell"></i>          <span class="nav_logo-name">SeuTreino</span>        </a>        <div class="nav_list">          <a href="#" class="nav_link active">            <i class="fa-solid fa-house-chimney"></i>            <span class="nav_name">Home</span>          </a>          <a routerLink="/profile-professional" class="nav_link">            <i class="fa-solid fa-calendar-days"></i>            <span class="nav_name">Minha Agenda</span>          </a>          <a routerLink="/search-result" class="nav_link">            <i class="fa-solid fa-magnifying-glass"></i>            <span class="nav_name">Serviços</span>          </a>          <a href="#" class="nav_link">            <i class="fa-solid fa-circle-info"></i>            <span class="nav_name">Sobre</span>          </a>          <a href="/contactus" class="nav_link">            <i class="fa-solid fa-envelope"></i>            <span class="nav_name">Contatos</span>          </a>          <a routerLink="/profile-professional" class="nav_link">            <i class="fa-solid fa-user"></i>            <span class="nav_name">Contatos</span>          </a>        </div>      </div>      <a href="#" class="nav_link">        <i class="bx bx-log-out nav_icon"></i>        <span class="nav_name">SignOut</span>      </a>    </nav>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AboutProfessionalComponent', 'selector': 'app-about-professional'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CommentsComponent', 'selector': 'app-comments'},{'name': 'ContactusComponent', 'selector': 'app-contactus'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormAdmComponent', 'selector': 'app-form-adm'},{'name': 'FormClientComponent', 'selector': 'app-form-client'},{'name': 'FormProfessionalComponent', 'selector': 'app-form-professional'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InitialComponent', 'selector': 'app-initial'},{'name': 'LoggedClientComponent', 'selector': 'app-logged-client'},{'name': 'LoggedProfessionalComponent', 'selector': 'app-logged-professional'},{'name': 'LoginAdmComponent', 'selector': 'app-login'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaroffComponent', 'selector': 'app-navbaroff'},{'name': 'NavbaronComponent', 'selector': 'app-navbaron'},{'name': 'PersonalDataComponent', 'selector': 'app-personal-data'},{'name': 'ProfessionalScheduleComponent', 'selector': 'app-professional-schedule'},{'name': 'ProfileProfessionalComponent', 'selector': 'app-profile-professional'},{'name': 'ResearchProfessionalComponent', 'selector': 'app-research-professional'},{'name': 'ScheduleTimeComponent', 'selector': 'app-schedule-time'},{'name': 'SearchResultComponent', 'selector': 'app-search-result'},{'name': 'ServicesProfessionalComponent', 'selector': 'app-services-professional'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NavbaronComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NavbaronComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

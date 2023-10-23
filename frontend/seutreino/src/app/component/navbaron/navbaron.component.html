@@ -1,0 +1,64 @@
+<div class="content">
+  <div class="header shadow" id="header">
+    <div class="header_toggle" (click)="toggleNavbar()">
+      <i class="bx" [class.bx-menu]="!isMenuOpen" [class.bx-x]="isMenuOpen" id="header-toggle"></i>
+    </div>
+    
+    <div class="header_user_and_notification">
+      <h5 class="m-0 me-1">{{userInfor?.name}}</h5>
+      <div class="header_user">
+        <img [src]="userInfor?.profilePicture || 'https://images.pexels.com/photos/2078467/pexels-photo-2078467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'" alt="" class="profilePicture">
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+      <div>
+        <a href="#" class="nav_logo">
+          <i class="fa-solid fa-dumbbell"></i>
+          <span class="nav_logo-name">SeuTreino</span>
+        </a>
+        <div class="tags" >
+        <div class="nav_list" *ngIf="userInfor?.role == 'CLIENT'">
+          <a routerLink="/logged-client" class="nav_link active">
+            <i class="fa-solid fa-house-chimney"></i>
+            <span class="nav_name">Home</span>
+          </a>
+        </div>
+        <div class="nav_list" *ngIf="userInfor?.role == 'PROFESSIONAL'">
+          <a routerLink="/logged-professional" class="nav_link active">
+            <i class="fa-solid fa-house-chimney"></i>
+            <span class="nav_name">Home</span>
+          </a>
+        </div>
+          <a routerLink="/schedule-time" class="nav_link" *ngIf="userInfor?.role == 'PROFESSIONAL'">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span class="nav_name">Minha Agenda</span>
+          </a>
+          <a routerLink="/search-result" class="nav_link">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span class="nav_name">Serviços</span>
+          </a>
+          <!-- <a href="/about" class="nav_link">
+            <i class="fa-solid fa-circle-info"></i>
+            <span class="nav_name">Sobre</span>
+          </a> -->
+          <!-- <a href="/contactus" class="nav_link">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="nav_name">Contatos</span>
+          </a> -->
+          <!-- <a href="" class="nav_link"  *ngIf="userInfor?.role == 'PROFESSIONAL'" >
+            <i class="fa-solid fa-user"></i>
+            <span class="nav_name">Perfil</span>
+          </a> -->
+        </div>
+      </div>
+      <a href="#" class="nav_link">
+        <i class="bx bx-log-out nav_icon"></i>
+        <span class="nav_name">SignOut</span>
+      </a>
+    </nav>
+  </div>
+</div>

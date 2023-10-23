@@ -1,0 +1,171 @@
+<app-navbaron></app-navbaron>
+<div class="container">
+    <div class="row">
+        <div class="card ml-4 mt-5">
+            <div class="card-body row">
+                <div class="col-md-6 d-md-flex justify-content-md-start">Seus horários
+                    disponíveis</div>
+                <div class="col-md-6 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary btn-save" type="button"><a data-toggle="popover" id="saiba_mais"
+                            title="Excluir Tudo">
+                            <i class="fa-solid fa-trash"></i>
+                        </a></button>
+
+                    <button class="btn btn-primary btn-save" type="button" (click)="showToast()">Salvar</button>
+
+                    <button class="btn btn-primary btn-save" data-bs-toggle="modal" data-bs-target="#change-time"
+                        type="button">
+                        <a data-toggle="popover" id="saiba_mais" title="Salvar horário inicial">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </button>
+
+                    <div class="modal fade" id="change-time" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content add-hour">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Horário de Início</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input id="hour" type="time" class="form-control" value="" [(ngModel)]="newHour"
+                                        #hourInput (keydown.enter)="saveHour()" />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <button class="btn btn-success" (click)="saveHour()">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="linha col d-flex">
+                            <div class="day-column">
+                                <label class="form-check-label " for=" flexCheckDefault">
+                                    <input class="form-check-input box" type="checkbox" value="" id="SUNDAY" name="SUNDAY"
+                                        [(ngModel)]="checkboxState['SUNDAY']" (ngModelChange)="isChecked('SUNDAY')">
+                                    DOM
+                                    <div>
+                                        <!-- Horários -->
+                                        <div class="hour" *ngIf="horasDisponiveisParaDia('SUNDAY').length > 0">
+                                            <br>
+                                            <button class="btn btn-primary btn-save" type="button"
+                                                *ngFor="let avaible of horasDisponiveisParaDia('SUNDAY')">
+                                                {{ avaible.hour }}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="day-column">
+                                <label class="form-check-label " for=" flexCheckDefault">
+                                    <input class="form-check-input box" type="checkbox" value="" id="MONDAY" name="MONDAY"
+                                        [(ngModel)]="checkboxState['MONDAY']" (ngModelChange)="isChecked('MONDAY')">
+                                    SEG
+                                    <div>
+                                        <!-- Horários -->
+                                        <div class="hour" *ngIf="horasDisponiveisParaDia('MONDAY').length > 0">
+                                            <br>
+                                            <button class="btn btn-primary btn-save" type="button"
+                                                *ngFor="let avaible of horasDisponiveisParaDia('MONDAY')">
+                                                {{ avaible.hour }}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="day-column">
+                                <label class="form-check-label " for=" flexCheckDefault">
+                                    <input class="form-check-input box" type="checkbox" value="" id="TUESDAY" name="TUESDAY"
+                                        [(ngModel)]="checkboxState['TUESDAY']" (ngModelChange)="isChecked('TUESDAY')">
+                                    TER
+                                    <div>
+                                        <!-- Horários -->
+                                        <div class="hour" *ngIf="horasDisponiveisParaDia('TUESDAY').length > 0">
+                                            <br>
+                                            <button class="btn btn-primary btn-save" type="button"
+                                                *ngFor="let avaible of horasDisponiveisParaDia('TUESDAY')">
+                                                {{ avaible.hour }}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="day-column">
+                                <label class="form-check-label " for=" flexCheckDefault">
+                                    <input class="form-check-input box" type="checkbox" value="" id="WEDNESDAY"
+                                        name="WEDNESDAY" [(ngModel)]="checkboxState['WEDNESDAY']"
+                                        (ngModelChange)="isChecked('WEDNESDAY')">
+                                    QUA
+                                    <div>
+                                        <!-- Horários -->
+                                        <div class="hour" *ngIf="horasDisponiveisParaDia('WEDNESDAY').length > 0">
+                                            <br>
+                                            <button class="btn btn-primary btn-save" type="button"
+                                                *ngFor="let time of horasDisponiveisParaDia('WEDNESDAY')">
+                                                {{ time.hour }}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="day-column">
+                                <label class="form-check-label " for=" flexCheckDefault">
+                                    <input class="form-check-input box" type="checkbox" value="" id="THURSDAY"
+                                        name="THURSDAY" [(ngModel)]="checkboxState['THURSDAY']"
+                                        (ngModelChange)="isChecked('THURSDAY')">
+                                    QUI
+                                    <!-- Horários -->
+                                    <div class="hour" *ngIf="horasDisponiveisParaDia('THURSDAY').length > 0">
+                                        <br>
+                                        <button class="btn btn-primary btn-save" type="button"
+                                            *ngFor="let avaible of horasDisponiveisParaDia('THURSDAY')">
+                                            {{ avaible.hour }}
+                                        </button>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="day-column">
+                                <label class="form-check-label " for=" flexCheckDefault">
+                                    <input class="form-check-input box" type="checkbox" value="" id="FRIDAY" name="FRIDAY"
+                                        [(ngModel)]="checkboxState['FRIDAY']" (ngModelChange)="isChecked('FRIDAY')">
+                                    SEX
+                                    <div>
+                                        <!-- Horários -->
+                                        <div class="hour" *ngIf="horasDisponiveisParaDia('FRIDAY').length > 0">
+                                            <br>
+                                            <button class="btn btn-primary btn-save" type="button"
+                                                *ngFor="let avaible of horasDisponiveisParaDia('FRIDAY')">
+                                                {{ avaible.hour }}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="day-column">
+                                <label class="form-check-label " for=" flexCheckDefault">
+                                    <input class="form-check-input box" type="checkbox" value="" id="SATURDAY"
+                                        name="SATURDAY" [(ngModel)]="checkboxState['SATURDAY']"
+                                        (ngModelChange)="isChecked('SATURDAY')">
+                                    SAB
+                                    <!-- Horários -->
+                                    <div class="hour" *ngIf="horasDisponiveisParaDia('SATURDAY').length > 0">
+                                        <br>
+                                        <button class="btn btn-primary btn-save" type="button"
+                                            *ngFor="let avaible of horasDisponiveisParaDia('SATURDAY')">
+                                            {{ avaible.hour }}
+                                        </button>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

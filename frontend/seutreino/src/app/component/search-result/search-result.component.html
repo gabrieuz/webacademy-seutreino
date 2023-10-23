@@ -1,0 +1,125 @@
+<!-- search-result.component.html -->
+<app-navbaron></app-navbaron>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <!-- Formulário de pesquisa -->
+      <div class="search-text container ads-container mt-5" id="aab">
+        <h5 id="ask">Está em dúvida sobre qual atividade praticar? Pesquise apenas sua localização!</h5>
+        <div class="row flex-wrap">
+          <div class="form-group-home form-control-sm mx-2 d-flex flex-column flex-md-row justify-content-center"
+            id="search">
+            <input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="serviceOrProfessional"
+              placeholder="Serviço ou Profissional" class="me-2 mb-2 mb-md-0" />
+            <input pInputText pKeyFilter="int" placeholder="Localização" [(ngModel)]="location"
+              placeholder="Localização">
+          </div>
+          <div class="btn-div col-md-12 col-lg mx-2 text-center">
+            <button type="button" class="btn btn-warning" (click)="performSearch()">Pesquisar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="confirmationModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Confirmação de Agendamento</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Exiba a hora e o dia selecionados -->
+              <p>Dia: {{ portugueseDay }}</p>
+              <p>Hora: {{ selectedHour }}</p>
+              <!-- Botão de confirmação -->
+              <button class="btn btn-success" (click)="confirmarAgendamento()">Confirmar Agendamento</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim modal -->
+
+      <!-- Resultados da Pesquisa -->
+      <div class="mt-5"> <!-- Adicione uma margem superior para separar os resultados da pesquisa -->
+        <div *ngFor="let announcement of announcements">
+          <div class="container mb-2">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-12 announcement">
+                <div class="row z-depth-3">
+                  <div class="col-sm-4 rounded-left description ">
+                    <div class="card-block text-center text-white ">
+                      <div class="row text-start mt-1 ">
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <img src="{{announcement.professional.profilePicture}}" alt="" class="profilePicture">
+                      <h3 class="font-weight-bold mt-4">{{announcement.professional.name}}</h3>
+                      <p>{{announcement.profession.name}}</p>
+                      <p *ngIf="!announcement.expertises || announcement.expertises.length === 0">Nenhuma especialidade
+                        disponível.</p>
+                      <p *ngIf="announcement.expertises && announcement.expertises.length > 0">
+                        <span *ngFor="let expertises of announcement.expertises">Especialidades:
+                          {{expertises.name}}</span>
+                      </p>
+                      <div class="d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-location-dot fa-sm"></i>
+                        <span class="location ms-1" style="font-size: 18px;">
+                          {{announcement.city}},{{announcement.state}}
+                        </span>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                        <i class="fa-brands fa-instagram p-1" style="font-size: 30px;"></i>
+                        <i class="fa-brands fa-square-facebook p-1" style="font-size: 30px;"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-8 round-right rounded-right teste">
+                    <div class="row" id="datas">
+                      <div class="col-sm-12 mt-5">
+                        <div class="row date text-center">
+                          <div class="col-2 day-date" *ngFor="let dia of diasDaSemana">
+                            <h4>{{ dia }}</h4>
+                          </div>
+                        </div>
+                        <div class="row date text-center">
+                          <div class="col-2 day-date" *ngFor="let data of datasDaSemana">
+                            <h5>{{ data }}</h5>
+                          </div>
+                        </div>
+                        <div class="row pt-1 date text-center ">
+                          <div class="col-2  text-center"
+                            *ngFor="let day of ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY']">
+                            <!-- <span class="hours" *ngFor="let time of groupAvailableTimesByDay(announcement)[day]" (click)="abrirModal(day, time, announcement.professionalId)">
+                              {{ time }}
+                            </span> -->
+                            <span class="hours" *ngFor="let time of groupAvailableTimesByDay(announcement)[day]"
+                              data-bs-toggle="modal" data-bs-target="#confirmationModal"
+                              (click)="abrirModal(day, time, announcement.professionalId, announcement)">
+                              {{ time }}
+                            </span>
+
+                          </div>
+                        </div>
+                      </div>
+                     <div class="row-2 d-flex justify-content-end button">
+                        <button type="button" class="btn btn-outline-light" (click)="navigateToProfessionalProfile(announcement.professional.id)">Perfil</button>
+                     </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mt-5">
+      <!-- Mapa do Google ou outro conteúdo relacionado à localização -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31437.00137208768!2d-67.83902685874021!3d-9.965110608268734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1695073403095!5m2!1spt-BR!2sbr"
+        width="400" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>

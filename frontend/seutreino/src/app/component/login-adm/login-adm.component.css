@@ -1,0 +1,19 @@
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-top: 80px;
+}
+
+#general{
+  background-color: #f8f8ff;
+  min-height: 70vh;
+}
+input:focus {
+  outline: none;
+  border-color: #ccc; /* Pode ajustar a cor da borda de acordo com sua preferência */
+  box-shadow: none;
+}

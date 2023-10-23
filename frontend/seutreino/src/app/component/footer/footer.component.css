@@ -1,0 +1,75 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.contact-box {
+    line-height: 1px;
+}
+
+#contact-area {
+    background-color: #2C2C2C;
+    text-align: center;
+    color: white;
+}
+
+.contant-footer {
+    overflow-x: hidden;
+}
+
+#copy-area {
+    background-color: #1d1d1d;
+    color: white;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+i {
+    margin: 5px;
+}
+
+.social-media {
+    display: inline-grid;
+    grid-template-columns: 33% 33px 33%;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+.logo {
+    display: inline-grid;
+    grid-template-columns: 30%;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+img {
+    width: 100px;
+    height: 75px;
+}
+
+@media screen and (max-width: 767px) {
+    .logo {
+        display: none;
+    }
+}

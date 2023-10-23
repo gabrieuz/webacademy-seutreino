@@ -1,0 +1,91 @@
+<app-navbaroff></app-navbaroff>
+<div class="form-group">
+<div class="form-group img">
+  <div class="cadastra-se">
+    <h1 class="title">cadastra-se</h1>
+    <div class="group-wrap">
+      <form class="contact-form row" (ngSubmit)="submit(form)" #form="ngForm">
+        <div class="form-field col-lg-12">
+          <input id="name" class="input-text transparent-input" type="text" [(ngModel)]="registro.name" name="name" required>
+          <label class="label" for="name">Nome Completo</label>
+        </div>
+        <div class="form-field col-lg-12">
+          <input id="email" class="input-text transparent-input" type="email" [(ngModel)]="registro.email" name="email" required>
+          <label class="label" for="email">E-mail</label>
+        </div>
+        <div class="form-field col-lg-12">
+          <input id="phone" class="input-text transparent-input" type="tel" [(ngModel)]="registro.phone" name="phone" (input)="phoneMask($event)" required>
+          <label class="label" for="phoner">Telefone</label>
+        </div>
+        <div class="form-field col-lg-12">
+          <input id="password" class="input-text transparent-input" type="password" [(ngModel)]="registro.password" name="password" required>
+          <label class="label" for="password">Senha</label>
+        </div>
+        <div class="form-field col-lg-12">
+          <select id="gender" class="input-text transparent-input" [(ngModel)]="registro.gender" name="gender">
+            <option class="label" value="null"></option>
+            <option class="label" value="M">Masculino</option>
+            <option class="label" value="F">Feminino</option>
+          </select>
+          <label class="label" for="gender">Gênero</label>
+        </div>
+        <div class="form-field col-lg-12">
+          <input id="birth-date" class="input-text transparent-input" type="date" [(ngModel)]="registro.birthDate" name="birthDate" required>
+          <label class="label" for="birth-date">Data de Nascimento</label>
+        </div>
+        <div class="form-field col-lg-12">
+          <input id="cep" class="input-text transparent-input" type="text" [(ngModel)]="registro.cep" name="cep" (input)="fetchAddressByCep(registro.cep)" (input)="cepMask($event)" required>
+          <label class="label" for="cep">Cep</label>
+        </div>
+        <div class="form-field col-lg-12">
+          <select id="state" class="input-text transparent-input" [(ngModel)]="registro.state" name="state">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+          <label class="label" for="state">Estado</label>
+        </div>
+        <div class="form-field col-lg-12">
+          <input id="city" class="input-text transparent-input" type="text" [(ngModel)]="registro.city" name="city" required>
+          <label class="label" for="city">Cidade</label>
+        </div>
+        <div class="form-field col-lg-12">
+          <input id="road" class="input-text transparent-input" type="text" [(ngModel)]="registro.street" name="street" required>
+          <label class="label" for="road">Rua</label>
+        </div>
+
+        <!-- Botão cadastrar -->
+        <button class="submit-btn" type="submit" [disabled]="isSubmitting">
+          <span *ngIf="!isSubmitting">Cadastrar</span>
+          <span *ngIf="isSubmitting">
+            <i class="fa-solid fa-dumbbell fa-bounce"></i>
+          </span>
+        </button>
+        <!-- Fim do botão cadastrar -->
+
+      </form>
+    </div>

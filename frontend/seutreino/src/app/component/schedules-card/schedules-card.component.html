@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="card col-12">
+            <div class="card-body">
+                <!-- Verifique se há agendamentos usando *ngIf -->
+                <ng-container *ngIf="hasAppointments; else noAppointments">
+                    <div class="card d-flex">
+                        <div class="row mt-2 align-items-center d-flex justify-content-center">
+                            <div class="geralti col mx-1 d-inline-flex justify-content-center">
+                                <!-- nome do cliente -->
+                                <label class="geralti">Maria Silva de Souza</label>
+                            </div>
+                            <div class="geralti col mx-1 d-flex justify-content-center align-items-center">
+                                <!-- horário do atendimento -->
+                                <label class="geralti">09:15</label>
+                            </div>
+                            <div class="geralti col mx-1 d-flex justify-content-center">
+                                <div class="geralti">
+                                    <button type="button" class="btn cancel">Cancelar</button>
+                                </div>
+                                <div class="geralti">
+                                    <button type="button" class="btn details" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">Detalhes</button>
+
+                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label for="">Treino:</label>
+                                                            <hr>
+                                                            <label for="">Local:</label>
+                                                        </div>
+                                                        <!-- justificativa de cancelamento -->
+                                                        <div class="col">
+                                                            <label for="">justificativa:</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Fechar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="geralti">
+                                    <button type="button" class="btn confirm">Confirmar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+
+                <!-- Se não houver agendamentos -->
+                <ng-template #noAppointments>
+                    <div class="row align-items-center ult">
+                        <div class="col-12 nop geralti justify-content-center align-items-center">
+                            <label for="">Sua agenda está vazia, clique aqui para preenchê-la</label>
+                        </div>
+                        <div class="geralti nop justify-content-center align-items-center">
+                            <button type="button" class="btn mais" (click)="createAnnouncemnet()">Faça seu anúncio!</button>
+                        </div>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

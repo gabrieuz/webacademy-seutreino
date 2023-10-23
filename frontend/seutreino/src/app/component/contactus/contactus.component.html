@@ -1,0 +1,42 @@
+<app-navbaroff></app-navbaroff>
+<section id="contactus">
+  <!-- <style="background-image:url(/frontend/seutreino/src/assets/imagens/contactus.png);"> -->
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h2 class="text-uppercase section-heading" style="color: white;">Entre em contato através do formulário abaixo
+        </h2>
+        <!-- <h3 class="text-muted section-subheading">Lorem ipsum dolor sit amet consectetur.</h3> -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <form id="contactForm" name="contactForm" (ngSubmit)="submit(form)" #form="ngForm">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-3"><input class="form-control form-control" type="text"
+                  placeholder="Nome Completo *" [(ngModel)]="record.name" name="name" required /><small
+                  class="form-text text-danger flex-grow-1 lead"></small></div>
+              <div class="form-group mb-3"><input class="form-control form-control" type="email"
+                  placeholder="Email *" [(ngModel)]="record.email" name="email" required /><small class="form-text text-danger lead"></small></div>
+              <div class="form-group mb-3"><input class="form-control form-control" type="tel" placeholder="Celular *"
+                  [(ngModel)]="record.phone" name="phone" (input)="phoneMask($event)" required /><small class="form-text text-danger lead"></small></div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-3"><input class="form-control form-control" type="text" placeholder="Assunto *"
+                  [(ngModel)]="record.role" name="role" required /><small class="form-text text-danger lead"></small></div>
+              <div class="form-group mb-3"><textarea class="form-control form-control"
+                  placeholder="Your Message *" [(ngModel)]="record.message" name="message" required></textarea><small class="form-text text-danger lead"></small>
+              </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-lg-12 text-center">
+              <div></div><button class="btn btn-primary text-uppercase btn-xl"
+                type="submit" [disabled]="isSubmiting"><span *ngIf="!isSubmiting">Enviar mensagem</span><span *ngIf="isSubmiting"> </span> </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

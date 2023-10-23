@@ -1,0 +1,211 @@
+.container {
+    margin-top: 4em;
+}
+
+.geralti {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.card {
+    border: 2px solid ;
+    margin: 10px;
+    /* border-left: 5px solid;
+    border-left-color: orange; */
+}
+
+.nop {
+    font-size: 22px;
+    padding: 6px 18px;
+}
+
+.btn {
+    margin-right: 2px;
+    font-size: 14px;
+    padding: 4px 16px;
+}
+
+button.mais {
+    --color: #F28A2E;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .3s;
+    z-index: 1;
+    border-radius: 10px;
+    color: var(--color);
+    font-size: 20px;
+}
+
+button.mais:before {
+    content: "";
+    z-index: -1;
+    background: var(--color);
+    height: 100px;
+    width: 900px;
+    border-radius: 50%;
+}
+
+button.mais:hover {
+    color: #ffffff;
+    box-shadow: 0 0 5px #F28A2E,
+              0 0 25px #F28A2E;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button.mais:active:before {
+    background: #F28A2E;
+}
+
+button.cancel {
+    --color: #d11707;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .3s;
+    z-index: 1;
+    border-radius: 10px;
+    color: var(--color);
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+button.cancel:hover {
+    color: #ffffff;
+    box-shadow: 0 0 5px #d11707,
+              0 0 25px #d11707;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button.cancel:active:before {
+    background: #d11707;
+}
+
+button.details {
+    --color: #0d6efd;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .3s;
+    z-index: 1;
+    border-radius: 10px;
+    color: var(--color);
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+button.details:hover {
+    color: #ffffff;
+    box-shadow: 0 0 5px #0d6efd,
+              0 0 25px #0d6efd;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button.details:active:before {
+    background: #0d6efd;
+}
+
+button.confirm {
+    --color: #008000;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .3s;
+    z-index: 1;
+    border-radius: 10px;
+    color: var(--color);
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+button.confirm:hover {
+    color: #ffffff;
+    box-shadow: 0 0 5px #008000,
+              0 0 25px #008000;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button.confirm:active:before {
+    background: #008000;
+}
+
+  
+  /* Estilos para tornar responsivo */
+  @media (max-width: 600px) {
+    .btn {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .btn {
+      font-size: 12px;
+      padding: 6px 18px;
+    }
+  }

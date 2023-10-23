@@ -1,0 +1,23 @@
+body, html{
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+
+}
+
+:root{
+
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+body, app-root {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+#navb {
+    background-color: #F28A2E;
+}

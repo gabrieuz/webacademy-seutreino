@@ -1,0 +1,98 @@
+
+
+
+#container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.search-text{
+  background-color: #e9ecec;
+}
+
+
+
+.btn {
+  background-color: #F28A2E;
+  border-color: transparent;
+  color: white;
+  border-radius: 4px;
+  padding: 10px 35px;
+}
+
+.btn:hover {
+  background-color: #F28A2E;
+  border-color: transparent;
+  color: white;
+  border-radius: 4px;
+  padding: 10px 35px;
+  opacity: 0.8;
+}
+
+.btn-div {
+  margin: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h4, h5 {
+  font-size: 18px
+}
+
+
+h5#ask {
+  padding-top: 30px;
+}
+
+@media (max-width: 990px) {
+  .home-text2 {
+      display: none;
+  }
+}
+.announcement {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.description {
+  background-color: #F28A2E;
+}
+
+.button {
+  margin-top: 16%;
+}
+
+.teste{
+  background-color: #2C2C2C;
+  color: white;
+}
+.day-date{
+  text-align: center; /* Alinhe o texto ao centro */
+  margin: 0 0px; /* Adicione margem interna para espaçamento entre os dias e datas */
+  color: white;
+}
+.hours{
+  text-align: center;
+  margin: 0 2px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  padding: 0.2em;
+  margin: 0 1% 0 0;
+}
+.hours:hover{
+  background-color: #F28A2E;
+
+}
+
+
+  .col-2 {
+    width: calc(16.66667% - 4px);
+  }
+
+.profilePicture {
+  height: 100px;
+  width: 100px;
+}
+

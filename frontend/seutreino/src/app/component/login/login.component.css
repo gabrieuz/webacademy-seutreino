@@ -1,0 +1,91 @@
+
+.screen {
+    margin: 0;
+    padding: 0;
+}
+
+div#screen{
+    background-image: url(../../../assets/imagens/imglogin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+div#content-login{
+    max-width: 100%; /* ou um valor específico, como 1200px */
+    overflow-x: hidden;
+}
+.login {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: inline-grid;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    grid-template-columns:100%;
+
+}
+
+h2 {
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+div .recover a {
+    font-size: 12px;
+}
+div .recover p {
+    font-size: 12px;
+}
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    margin-top: 15px;
+}
+.form-control {
+    border: transparent;
+}
+
+input {
+    width: 70%;
+}
+
+.recover {
+    margin-top: 10px;
+    margin-left: 35%;
+    margin-bottom: 20px;
+}
+.btn {
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) and (max-width: 1023px) {
+    .recover {
+        margin-top: 10px;
+        margin-left: 15%;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 767px){
+    #screen {
+        display: none;
+    }
+    h2{
+        font-size: 30px;
+    }
+    #login {
+        display: grid;
+        justify-content: right !important;
+    }
+}

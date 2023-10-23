@@ -1,0 +1,31 @@
+<app-navbaroff></app-navbaroff>
+<div class="container-fluid" id="content-login">
+  <div class="row" >
+      <div class="col screen" id="screen">
+      </div>
+      <div class="col login " id="login">
+          <h2>Login</h2>
+
+          <div class="container d-flex justify-content-center form">
+              <input type="text" id="typeText" class="form-control" placeholder="E-mail" [(ngModel)]="email" name="email" required/>
+            </div>
+
+            <div class="container d-flex justify-content-center form ">
+              <input type="password" id="typePassword" class="form-control" placeholder="Senha" [(ngModel)]="password" name="password" required/>
+            </div>
+
+            <div class="recover">
+              <p>Esqueceu sua senha? <a href="">Clique aqui</a></p>
+            </div>
+
+            <div class="container d-flex justify-content-center d-grid gap-2">
+              <button class="btn btn-primary" type="button" (click)="onSubmit()">Entrar</button>
+            </div>
+
+            <div class="new">
+              <p>Ou</p>
+              <a routerLink="/initial">Cadastre-se</a>
+            </div>
+      </div>
+  </div>
+</div>

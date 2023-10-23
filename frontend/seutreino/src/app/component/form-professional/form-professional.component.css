@@ -1,0 +1,103 @@
+.cadastra-se {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+}
+
+.img {
+    background-image: url(/assets/imagens/dan-aran-fotor-2.0.jpg);
+}
+
+.title {
+    color: #ffffff;
+    border-color: black;
+    border-bottom: 5px;
+}
+
+.cadastra-se .title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.2em;
+    line-height: 48px;
+    padding-bottom: 8px;
+}
+
+.group-wrap {
+    border: 4px;
+    border-color: black;
+    padding: 5% 10%;
+    border-radius: 4px;
+    Background: rgba(0, 0, 0, 0.5)
+}
+
+.contact-form .form-field {
+    position: relative;
+    margin: 22px 0;
+}
+
+.contact-form .transparent-input {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.contact-form .input-text {
+    color: rgb(255, 255, 255);
+    display: block;
+    width: 100%;
+    height: 28px;
+    border-width: 0 0 2px 0;
+    border-color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.contact-form .input-text:focus {
+    outline: none;
+}
+
+.contact-form .input-text:focus+.label,
+.contact-form .input-text.not-empty+.label {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.contact-form .label {
+    position: absolute;
+    left: 14px;
+    bottom: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: text;
+}
+
+.contact-form .submit-btn {
+    position: relative;
+    justify-content: center;
+    display: inline-block;
+    background-color: #ffffff;
+    background-image: linear-gradient(125deg, #da9355, #F28A2E);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 4px;
+    cursor: pointer;
+}
+
+.form-check {
+    margin-bottom: -3px;
+    color: #ffffff;
+}
+
+.especial {
+    margin-bottom: 24px;
+}
+
+option.label{
+    color: black !important;
+}

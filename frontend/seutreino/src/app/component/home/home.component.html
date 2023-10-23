@@ -1,0 +1,77 @@
+<app-navbaroff></app-navbaroff>
+<div class="" id="home">
+  <div class="spacer">
+
+  </div>
+  <div class="home-text container ads-container" id="aab">
+    <h5 id="ask">Está em dúvida sobre qual atividade praticar? Pesquise apenas sua localização!</h5>
+    <div class="row flex-wrap">
+      <div class="form-group-home col-md mx-2 d-flex justify-content-center" id="search1">
+        <input type="text" class="form-control" id="searchh" [(ngModel)]="serviceOrProfessional" placeholder="Serviço ou Profissional">
+      </div>
+      <div class="form-group-home col-md mx-2 d-flex justify-content-center" id="search2">
+        <input type="text" class="form-control" id=""[(ngModel)]="location" placeholder="Localização">
+      </div>
+      <div class="btn-div col-md-12 col-lg mx-2 text-center">
+        <button type="button" class="btn btn-warning" (click)="performSearch()">Pesquisar</button>
+      </div>
+    </div>
+    <!-- componente de anuncios -->
+    <div class="announcement-componet "*ngFor="let announcement of announcements">
+      <div class="container mb-2">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 mt-5 announcement">
+            <div class="row z-depth-3">
+              <div class="col-sm-4 rounded-left description-announcement ">
+                <div class="card-block text-center text-white ">
+                  <div class="row text-start mt-1 ">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <i class="fas fa-user-tie fa-3x mt-1"></i>
+                  <h3 class="font-weight-bold mt-4">{{announcement.professional.name}}</h3>
+                  <p>{{announcement.profession.name}}</p>
+                  <p *ngIf="!announcement.expertises || announcement.expertises.length === 0">Nenhuma especialidade
+                    disponível.</p>
+                  <p *ngIf="announcement.expertises && announcement.expertises.length > 0"> <span
+                      *ngFor="let expertises of announcement.expertises"> Especialidades: {{expertises.name}}</span></p>
+                  <div class="d-flex align-items-center justify-content-center ">
+                    <i class="fa-solid fa-location-dot fa-sm"></i>
+                    <span class="location ms-1" style="font-size: 18px;">{{announcement.city}},{{announcement.state}}</span>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <i class="fa-brands fa-instagram p-1" style="font-size: 30px;"></i>
+                    <i class="fa-brands fa-square-facebook p-1" style="font-size: 30px;"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-8 round-right rounded-right teste-1">
+                <div class="row" id="datas">
+                  <div class="col-sm-12 mt-5 ">
+                    <div class="row date text-center">
+                      <div class="col-2 day-date" *ngFor="let dia of diasDaSemana">
+                        <h4>{{ dia }}</h4>
+                      </div>
+                    </div>
+                    <div class="row date text-center">
+                      <div class="col-2 day-date" *ngFor="let data of datasDaSemana">
+                        <h5>{{ data }}</h5>
+                      </div>
+                    </div>
+                    <div class="row pt-1 date text-center">
+                      <div class="col-2  text-center"
+                        *ngFor="let day of ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY']">
+                        <span class="hours" *ngFor="let time of groupAvailableTimesByDay(announcement)[day]">{{ time }}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row-2 d-flex justify-content-end button mb-1 btn-ver">
+                    <button type="button" class="btn btn-outline-light">Veja mais</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

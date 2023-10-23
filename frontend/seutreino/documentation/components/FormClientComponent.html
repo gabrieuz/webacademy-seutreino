@@ -1,0 +1,1209 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>seutreino documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">seutreino documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  FormClientComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/component/form-client/form-client.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="../interfaces/IForm.html" target="_self" >IForm</a></code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-form-client</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./form-client.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./form-client.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isSubmitting" >isSubmitting</a>
+                            </li>
+                            <li>
+                                <a href="#registro" >registro</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cepMask" >cepMask</a>
+                            </li>
+                            <li>
+                                <a href="#fetchAddressByCep" >fetchAddressByCep</a>
+                            </li>
+                            <li>
+                                <a href="#formatCep" >formatCep</a>
+                            </li>
+                            <li>
+                                <a href="#formatPhone" >formatPhone</a>
+                            </li>
+                            <li>
+                                <a href="#phoneMask" >phoneMask</a>
+                            </li>
+                            <li>
+                                <a href="#submit" >submit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(clientService: <a href="../injectables/ClientService.html" target="_self">ClientService</a>, router: Router, toastr: ToastrService, http: <a href="../interfaces/Client.html" target="_self">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/component/form-client/form-client.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>clientService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ClientService.html" target="_self" >ClientService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Client.html" target="_self" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cepMask"></a>
+                    <span class="name">
+                        <span ><b>cepMask</b></span>
+                        <a href="#cepMask"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cepMask(event: Event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/app/component/form-client/form-client.component.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>Event</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchAddressByCep"></a>
+                    <span class="name">
+                        <span ><b>fetchAddressByCep</b></span>
+                        <a href="#fetchAddressByCep"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fetchAddressByCep(cep: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/component/form-client/form-client.component.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cep</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatCep"></a>
+                    <span class="name">
+                        <span ><b>formatCep</b></span>
+                        <a href="#formatCep"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatCep(cep: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/component/form-client/form-client.component.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cep</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatPhone"></a>
+                    <span class="name">
+                        <span ><b>formatPhone</b></span>
+                        <a href="#formatPhone"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatPhone(phone: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/component/form-client/form-client.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>phone</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="phoneMask"></a>
+                    <span class="name">
+                        <span ><b>phoneMask</b></span>
+                        <a href="#phoneMask"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>phoneMask(event: Event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/component/form-client/form-client.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>Event</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submit"></a>
+                    <span class="name">
+                        <span ><b>submit</b></span>
+                        <a href="#submit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submit(form: NgForm)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/component/form-client/form-client.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                            <code>NgForm</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSubmitting"></a>
+                    <span class="name">
+                        <span ><b>isSubmitting</b></span>
+                        <a href="#isSubmitting"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/component/form-client/form-client.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registro"></a>
+                    <span class="name">
+                        <span ><b>registro</b></span>
+                        <a href="#registro"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Client.html" target="_self" >Client</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&lt;Client&gt;{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/component/form-client/form-client.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { ClientService } from &#x27;src/app/services/client.service&#x27;;
+import { Client } from &#x27;src/app/model/client.interface&#x27;;
+import { IForm } from &#x27;src/app/i-form&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { NgForm } from &#x27;@angular/forms&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { catchError } from &#x27;rxjs/operators&#x27;;
+import { throwError } from &#x27;rxjs&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+
+@Component({
+  selector: &#x27;app-form-client&#x27;,
+  templateUrl: &#x27;./form-client.component.html&#x27;,
+  styleUrls: [&#x27;./form-client.component.css&#x27;],
+})
+export class FormClientComponent implements IForm&lt;Client&gt; {
+  registro: Client &#x3D; &lt;Client&gt;{};
+  isSubmitting: boolean &#x3D; false;
+
+  constructor(
+    private clientService: ClientService,
+    private router: Router,
+    private toastr: ToastrService,
+    private http: HttpClient
+  ) { }
+
+  submit(form: NgForm): void {
+    this.isSubmitting &#x3D; true;
+    this.clientService
+      .createClient(this.registro)
+      .pipe(
+        catchError((error) &#x3D;&gt; {
+          this.toastr.error(&#x27;Ocorreu um erro ao cadastrar o cliente.&#x27;, &#x27;Erro&#x27;);
+          this.isSubmitting &#x3D; false;
+          return throwError(() &#x3D;&gt; error);
+        })
+      )
+      .subscribe({
+        complete: () &#x3D;&gt; {
+          this.toastr.success(&#x27;Cadastro realizado com sucesso!&#x27;, &#x27;Sucesso&#x27;);
+          this.router.navigateByUrl(&#x27;/login&#x27;);
+        },
+      });
+    // this.isSubmitting &#x3D; true;
+    // this.clientService
+    //   .createClient(this.registro)
+    //   .pipe(
+    //     catchError((error) &#x3D;&gt; {
+    //       this.toastr.error(&#x27;Ocorreu um erro ao cadastrar o cliente.&#x27;, &#x27;Erro&#x27;);
+    //       this.isSubmitting &#x3D; false;
+    //       return throwError(() &#x3D;&gt; error);
+    //     })
+    //   )
+    //   .subscribe({
+    //     complete: () &#x3D;&gt; {
+    //       this.toastr.success(&#x27;Cadastro realizado com sucesso!&#x27;, &#x27;Sucesso&#x27;);
+    //       this.router.navigateByUrl(&#x27;/login&#x27;);
+    //     },
+    //   });
+  }
+
+  // Aplicar a máscara ao campo de telefone
+  phoneMask(event: Event): void {
+    const inputElement &#x3D; event.target as HTMLInputElement;
+    inputElement.value &#x3D; this.formatPhone(inputElement.value);
+  }
+
+  // Formatar o telefone com a máscara
+  formatPhone(phone: string): string {
+    return phone
+      .replace(/\D/g, &#x27;&#x27;)
+      .replace(/^(\d)/, &#x27;($1&#x27;)
+      .replace(/^(\(\d{2})(\d)/, &#x27;$1) $2&#x27;)
+      .replace(/(\d{5})(\d{1,4})/, &#x27;$1-$2&#x27;)
+      .replace(/(-\d{4})\d+?$/, &#x27;$1&#x27;);
+  }
+
+  // Aplicar a máscara ao campo de CEP
+  cepMask(event: Event): void {
+    const inputElement &#x3D; event.target as HTMLInputElement;
+    inputElement.value &#x3D; this.formatCep(inputElement.value);
+  }
+
+  // Formatar o CEP com a máscara
+  formatCep(cep: string): string {
+    return cep
+      .replace(/\D/g, &#x27;&#x27;)
+      .replace(/(\d{5})(\d{1,3})/, &#x27;$1-$2&#x27;)
+      .replace(/(-\d{3})\d+?$/, &#x27;$1&#x27;);
+  }
+
+  // Buscar dados do endereço a partir do CEP usando a API ViaCEP
+  fetchAddressByCep(cep: string): void {
+    cep &#x3D; cep.replace(/\D/g, &#x27;&#x27;); // Remove os caracteres não numéricos
+    if (cep.length &#x3D;&#x3D;&#x3D; 8) { // Verifica se tem 8 dígitos
+      const url &#x3D; &#x60;https://viacep.com.br/ws/${cep}/json/&#x60;;
+      this.http.get(url).subscribe((data: any) &#x3D;&gt; {
+        if (!data.erro) {
+          // Atualiza os campos de endereço com os dados retornados
+          this.registro.street &#x3D; data.logradouro;
+          this.registro.city &#x3D; data.localidade;
+          this.registro.state &#x3D; data.uf;
+        }
+      });
+    }
+  }
+  
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-navbaroff&gt;&lt;/app-navbaroff&gt;
+&lt;div class&#x3D;&quot;form-group&quot;&gt;
+&lt;div class&#x3D;&quot;form-group img&quot;&gt;
+  &lt;div class&#x3D;&quot;cadastra-se&quot;&gt;
+    &lt;h1 class&#x3D;&quot;title&quot;&gt;cadastra-se&lt;/h1&gt;
+    &lt;div class&#x3D;&quot;group-wrap&quot;&gt;
+      &lt;form class&#x3D;&quot;contact-form row&quot; (ngSubmit)&#x3D;&quot;submit(form)&quot; #form&#x3D;&quot;ngForm&quot;&gt;
+        &lt;div class&#x3D;&quot;form-field col-lg-12&quot;&gt;
+          &lt;input id&#x3D;&quot;name&quot; class&#x3D;&quot;input-text transparent-input&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;registro.name&quot; name&#x3D;&quot;name&quot; required&gt;
+          &lt;label class&#x3D;&quot;label&quot; for&#x3D;&quot;name&quot;&gt;Nome Completo&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-field col-lg-12&quot;&gt;
+          &lt;input id&#x3D;&quot;email&quot; class&#x3D;&quot;input-text transparent-input&quot; type&#x3D;&quot;email&quot; [(ngModel)]&#x3D;&quot;registro.email&quot; name&#x3D;&quot;email&quot; required&gt;
+          &lt;label class&#x3D;&quot;label&quot; for&#x3D;&quot;email&quot;&gt;E-mail&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-field col-lg-12&quot;&gt;
+          &lt;input id&#x3D;&quot;phone&quot; class&#x3D;&quot;input-text transparent-input&quot; type&#x3D;&quot;tel&quot; [(ngModel)]&#x3D;&quot;registro.phone&quot; name&#x3D;&quot;phone&quot; (input)&#x3D;&quot;phoneMask($event)&quot; required&gt;
+          &lt;label class&#x3D;&quot;label&quot; for&#x3D;&quot;phoner&quot;&gt;Telefone&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-field col-lg-12&quot;&gt;
+          &lt;input id&#x3D;&quot;password&quot; class&#x3D;&quot;input-text transparent-input&quot; type&#x3D;&quot;password&quot; [(ngModel)]&#x3D;&quot;registro.password&quot; name&#x3D;&quot;password&quot; required&gt;
+          &lt;label class&#x3D;&quot;label&quot; for&#x3D;&quot;password&quot;&gt;Senha&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-field col-lg-12&quot;&gt;
+          &lt;select id&#x3D;&quot;gender&quot; class&#x3D;&quot;input-text transparent-input&quot; [(ngModel)]&#x3D;&quot;registro.gender&quot; name&#x3D;&quot;gender&quot;&gt;
+            &lt;option class&#x3D;&quot;label&quot; value&#x3D;&quot;null&quot;&gt;&lt;/option&gt;
+            &lt;option class&#x3D;&quot;label&quot; value&#x3D;&quot;M&quot;&gt;Masculino&lt;/option&gt;
+            &lt;option class&#x3D;&quot;label&quot; value&#x3D;&quot;F&quot;&gt;Feminino&lt;/option&gt;
+          &lt;/select&gt;
+          &lt;label class&#x3D;&quot;label&quot; for&#x3D;&quot;gender&quot;&gt;Gênero&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-field col-lg-12&quot;&gt;
+          &lt;input id&#x3D;&quot;birth-date&quot; class&#x3D;&quot;input-text transparent-input&quot; type&#x3D;&quot;date&quot; [(ngModel)]&#x3D;&quot;registro.birthDate&quot; name&#x3D;&quot;birthDate&quot; required&gt;
+          &lt;label class&#x3D;&quot;label&quot; for&#x3D;&quot;birth-date&quot;&gt;Data de Nascimento&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-field col-lg-12&quot;&gt;
+          &lt;input id&#x3D;&quot;cep&quot; class&#x3D;&quot;input-text transparent-input&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;registro.cep&quot; name&#x3D;&quot;cep&quot; (input)&#x3D;&quot;fetchAddressByCep(registro.cep)&quot; (input)&#x3D;&quot;cepMask($event)&quot; required&gt;
+          &lt;label class&#x3D;&quot;label&quot; for&#x3D;&quot;cep&quot;&gt;Cep&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-field col-lg-12&quot;&gt;
+          &lt;select id&#x3D;&quot;state&quot; class&#x3D;&quot;input-text transparent-input&quot; [(ngModel)]&#x3D;&quot;registro.state&quot; name&#x3D;&quot;state&quot;&gt;
+            &lt;option value&#x3D;&quot;AC&quot;&gt;Acre&lt;/option&gt;
+            &lt;option value&#x3D;&quot;AL&quot;&gt;Alagoas&lt;/option&gt;
+            &lt;option value&#x3D;&quot;AP&quot;&gt;Amapá&lt;/option&gt;
+            &lt;option value&#x3D;&quot;AM&quot;&gt;Amazonas&lt;/option&gt;
+            &lt;option value&#x3D;&quot;BA&quot;&gt;Bahia&lt;/option&gt;
+            &lt;option value&#x3D;&quot;CE&quot;&gt;Ceará&lt;/option&gt;
+            &lt;option value&#x3D;&quot;DF&quot;&gt;Distrito Federal&lt;/option&gt;
+            &lt;option value&#x3D;&quot;ES&quot;&gt;Espírito Santo&lt;/option&gt;
+            &lt;option value&#x3D;&quot;GO&quot;&gt;Goiás&lt;/option&gt;
+            &lt;option value&#x3D;&quot;MA&quot;&gt;Maranhão&lt;/option&gt;
+            &lt;option value&#x3D;&quot;MT&quot;&gt;Mato Grosso&lt;/option&gt;
+            &lt;option value&#x3D;&quot;MS&quot;&gt;Mato Grosso do Sul&lt;/option&gt;
+            &lt;option value&#x3D;&quot;MG&quot;&gt;Minas Gerais&lt;/option&gt;
+            &lt;option value&#x3D;&quot;PA&quot;&gt;Pará&lt;/option&gt;
+            &lt;option value&#x3D;&quot;PB&quot;&gt;Paraíba&lt;/option&gt;
+            &lt;option value&#x3D;&quot;PR&quot;&gt;Paraná&lt;/option&gt;
+            &lt;option value&#x3D;&quot;PE&quot;&gt;Pernambuco&lt;/option&gt;
+            &lt;option value&#x3D;&quot;PI&quot;&gt;Piauí&lt;/option&gt;
+            &lt;option value&#x3D;&quot;RJ&quot;&gt;Rio de Janeiro&lt;/option&gt;
+            &lt;option value&#x3D;&quot;RN&quot;&gt;Rio Grande do Norte&lt;/option&gt;
+            &lt;option value&#x3D;&quot;RS&quot;&gt;Rio Grande do Sul&lt;/option&gt;
+            &lt;option value&#x3D;&quot;RO&quot;&gt;Rondônia&lt;/option&gt;
+            &lt;option value&#x3D;&quot;RR&quot;&gt;Roraima&lt;/option&gt;
+            &lt;option value&#x3D;&quot;SC&quot;&gt;Santa Catarina&lt;/option&gt;
+            &lt;option value&#x3D;&quot;SP&quot;&gt;São Paulo&lt;/option&gt;
+            &lt;option value&#x3D;&quot;SE&quot;&gt;Sergipe&lt;/option&gt;
+            &lt;option value&#x3D;&quot;TO&quot;&gt;Tocantins&lt;/option&gt;
+          &lt;/select&gt;
+          &lt;label class&#x3D;&quot;label&quot; for&#x3D;&quot;state&quot;&gt;Estado&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-field col-lg-12&quot;&gt;
+          &lt;input id&#x3D;&quot;city&quot; class&#x3D;&quot;input-text transparent-input&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;registro.city&quot; name&#x3D;&quot;city&quot; required&gt;
+          &lt;label class&#x3D;&quot;label&quot; for&#x3D;&quot;city&quot;&gt;Cidade&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;form-field col-lg-12&quot;&gt;
+          &lt;input id&#x3D;&quot;road&quot; class&#x3D;&quot;input-text transparent-input&quot; type&#x3D;&quot;text&quot; [(ngModel)]&#x3D;&quot;registro.street&quot; name&#x3D;&quot;street&quot; required&gt;
+          &lt;label class&#x3D;&quot;label&quot; for&#x3D;&quot;road&quot;&gt;Rua&lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Botão cadastrar --&gt;
+        &lt;button class&#x3D;&quot;submit-btn&quot; type&#x3D;&quot;submit&quot; [disabled]&#x3D;&quot;isSubmitting&quot;&gt;
+          &lt;span *ngIf&#x3D;&quot;!isSubmitting&quot;&gt;Cadastrar&lt;/span&gt;
+          &lt;span *ngIf&#x3D;&quot;isSubmitting&quot;&gt;
+            &lt;i class&#x3D;&quot;fa-solid fa-dumbbell fa-bounce&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/button&gt;
+        &lt;!-- Fim do botão cadastrar --&gt;
+
+      &lt;/form&gt;
+    &lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./form-client.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.cadastra-se {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+}
+
+
+.form-group {
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+.img {
+    background-image: url(/assets/imagens/dan-aran-fotor-2.0.jpg);
+}
+
+.title {
+    color: #ffffff;
+    border-color: black;
+    border-bottom: 5px;
+}
+
+.cadastra-se .title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.2em;
+    line-height: 48px;
+    padding-bottom: 8px;
+}
+
+.group-wrap {
+    border: 4px;
+    border-color: black;
+    padding: 5% 10%;
+    border-radius: 4px;
+    Background: rgba(0, 0, 0, 0.5)
+}
+
+.contact-form .form-field {
+    position: relative;
+    margin: 22px 0;
+}
+
+.contact-form .transparent-input {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.contact-form .input-text {
+    color: rgb(255, 255, 255);
+    display: block;
+    width: 100%;
+    height: 28px;
+    border-width: 0 0 2px 0;
+    border-color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.contact-form .input-text:focus {
+    outline: none;
+}
+
+.contact-form .input-text:focus+.label,
+.contact-form .input-text.not-empty+.label {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.contact-form .label {
+    position: absolute;
+    left: 14px;
+    bottom: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: text;
+}
+
+.contact-form .submit-btn {
+    position: relative;
+    justify-content: center;
+    display: inline-block;
+    background-color: #ffffff;
+    background-image: linear-gradient(125deg, #da9355, #F28A2E);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 4px;
+    cursor: pointer;
+}
+
+.form-check {
+    margin-bottom: -3px;
+    color: #ffffff;
+}
+
+.especial {
+    margin-bottom: 24px;
+}
+
+option.label{
+    color: black !important;
+}
+
+#state {
+    color: white;
+}
+
+#state option {
+    color: black;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-navbaroff></app-navbaroff><div class="form-group"><div class="form-group img">  <div class="cadastra-se">    <h1 class="title">cadastra-se</h1>    <div class="group-wrap">      <form class="contact-form row" (ngSubmit)="submit(form)" #form="ngForm">        <div class="form-field col-lg-12">          <input id="name" class="input-text transparent-input" type="text" [(ngModel)]="registro.name" name="name" required>          <label class="label" for="name">Nome Completo</label>        </div>        <div class="form-field col-lg-12">          <input id="email" class="input-text transparent-input" type="email" [(ngModel)]="registro.email" name="email" required>          <label class="label" for="email">E-mail</label>        </div>        <div class="form-field col-lg-12">          <input id="phone" class="input-text transparent-input" type="tel" [(ngModel)]="registro.phone" name="phone" (input)="phoneMask($event)" required>          <label class="label" for="phoner">Telefone</label>        </div>        <div class="form-field col-lg-12">          <input id="password" class="input-text transparent-input" type="password" [(ngModel)]="registro.password" name="password" required>          <label class="label" for="password">Senha</label>        </div>        <div class="form-field col-lg-12">          <select id="gender" class="input-text transparent-input" [(ngModel)]="registro.gender" name="gender">            <option class="label" value="null"></option>            <option class="label" value="M">Masculino</option>            <option class="label" value="F">Feminino</option>          </select>          <label class="label" for="gender">Gênero</label>        </div>        <div class="form-field col-lg-12">          <input id="birth-date" class="input-text transparent-input" type="date" [(ngModel)]="registro.birthDate" name="birthDate" required>          <label class="label" for="birth-date">Data de Nascimento</label>        </div>        <div class="form-field col-lg-12">          <input id="cep" class="input-text transparent-input" type="text" [(ngModel)]="registro.cep" name="cep" (input)="fetchAddressByCep(registro.cep)" (input)="cepMask($event)" required>          <label class="label" for="cep">Cep</label>        </div>        <div class="form-field col-lg-12">          <select id="state" class="input-text transparent-input" [(ngModel)]="registro.state" name="state">            <option value="AC">Acre</option>            <option value="AL">Alagoas</option>            <option value="AP">Amapá</option>            <option value="AM">Amazonas</option>            <option value="BA">Bahia</option>            <option value="CE">Ceará</option>            <option value="DF">Distrito Federal</option>            <option value="ES">Espírito Santo</option>            <option value="GO">Goiás</option>            <option value="MA">Maranhão</option>            <option value="MT">Mato Grosso</option>            <option value="MS">Mato Grosso do Sul</option>            <option value="MG">Minas Gerais</option>            <option value="PA">Pará</option>            <option value="PB">Paraíba</option>            <option value="PR">Paraná</option>            <option value="PE">Pernambuco</option>            <option value="PI">Piauí</option>            <option value="RJ">Rio de Janeiro</option>            <option value="RN">Rio Grande do Norte</option>            <option value="RS">Rio Grande do Sul</option>            <option value="RO">Rondônia</option>            <option value="RR">Roraima</option>            <option value="SC">Santa Catarina</option>            <option value="SP">São Paulo</option>            <option value="SE">Sergipe</option>            <option value="TO">Tocantins</option>          </select>          <label class="label" for="state">Estado</label>        </div>        <div class="form-field col-lg-12">          <input id="city" class="input-text transparent-input" type="text" [(ngModel)]="registro.city" name="city" required>          <label class="label" for="city">Cidade</label>        </div>        <div class="form-field col-lg-12">          <input id="road" class="input-text transparent-input" type="text" [(ngModel)]="registro.street" name="street" required>          <label class="label" for="road">Rua</label>        </div>        <!-- Botão cadastrar -->        <button class="submit-btn" type="submit" [disabled]="isSubmitting">          <span *ngIf="!isSubmitting">Cadastrar</span>          <span *ngIf="isSubmitting">            <i class="fa-solid fa-dumbbell fa-bounce"></i>          </span>        </button>        <!-- Fim do botão cadastrar -->      </form>    </div></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AboutProfessionalComponent', 'selector': 'app-about-professional'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CommentsComponent', 'selector': 'app-comments'},{'name': 'ContactusComponent', 'selector': 'app-contactus'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormAdmComponent', 'selector': 'app-form-adm'},{'name': 'FormClientComponent', 'selector': 'app-form-client'},{'name': 'FormProfessionalComponent', 'selector': 'app-form-professional'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InitialComponent', 'selector': 'app-initial'},{'name': 'LoggedClientComponent', 'selector': 'app-logged-client'},{'name': 'LoggedProfessionalComponent', 'selector': 'app-logged-professional'},{'name': 'LoginAdmComponent', 'selector': 'app-login'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaroffComponent', 'selector': 'app-navbaroff'},{'name': 'NavbaronComponent', 'selector': 'app-navbaron'},{'name': 'PersonalDataComponent', 'selector': 'app-personal-data'},{'name': 'ProfessionalScheduleComponent', 'selector': 'app-professional-schedule'},{'name': 'ProfileProfessionalComponent', 'selector': 'app-profile-professional'},{'name': 'ResearchProfessionalComponent', 'selector': 'app-research-professional'},{'name': 'ScheduleTimeComponent', 'selector': 'app-schedule-time'},{'name': 'SearchResultComponent', 'selector': 'app-search-result'},{'name': 'ServicesProfessionalComponent', 'selector': 'app-services-professional'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'FormClientComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FormClientComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

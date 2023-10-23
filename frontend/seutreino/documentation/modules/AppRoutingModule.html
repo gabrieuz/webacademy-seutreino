@@ -1,0 +1,213 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>seutreino documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">seutreino documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content module">
+                   <div class="content-data">
+
+
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">Modules</li>
+    <li class="breadcrumb-item" >AppRoutingModule</li>
+</ol>
+
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a href="#info" 
+            class="nav-link"
+            class="nav-link active"
+            role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+    </li>
+    <li class="nav-item">
+        <a href="#source" 
+            class="nav-link"
+            
+            role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/app-routing.module.ts</code>
+        </p>
+
+
+
+
+
+        <div class="container-fluid module">
+            <div class="row">
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { FormClientComponent } from &#x27;./component/form-client/form-client.component&#x27;;
+import { FormProfessionalComponent } from &#x27;./component/form-professional/form-professional.component&#x27;;
+import { HomeComponent } from &#x27;./component/home/home.component&#x27;;
+import { LoginComponent } from &#x27;./component/login/login.component&#x27;;
+import { InitialComponent } from &#x27;./component/initial/initial.component&#x27;;
+import { LoggedClientComponent } from &#x27;./component/logged-client/logged-client.component&#x27;;
+import { LoggedProfessionalComponent } from &#x27;./component/logged-professional/logged-professional.component&#x27;;
+import { AboutComponent } from &#x27;./component/about/about.component&#x27;;
+import { PersonalDataComponent } from &#x27;./component/personal-data/personal-data.component&#x27;;
+import { FormAdmComponent } from &#x27;./component/form-adm/form-adm.component&#x27;;
+import { LoginAdmComponent } from &#x27;./component/login-adm/login-adm.component&#x27;;
+import { ContactusComponent } from &#x27;./component/contactus/contactus.component&#x27;;
+import { ScheduleTimeComponent } from &#x27;./component/schedule-time/schedule-time.component&#x27;;
+import { ProfileProfessionalComponent } from &#x27;./component/profile-professional/profile-professional.component&#x27;;
+import { ServicesProfessionalComponent } from &#x27;./component/services-professional/services-professional.component&#x27;;
+import { AboutProfessionalComponent } from &#x27;./component/about-professional/about-professional.component&#x27;;
+import { CommentsComponent } from &#x27;./component/comments/comments.component&#x27;;
+import { ProfessionalScheduleComponent } from &#x27;./component/professional-schedule/professional-schedule.component&#x27;;
+import { ResearchProfessionalComponent } from &#x27;./component/research-professional/research-professional.component&#x27;;
+import { SearchResultComponent } from &#x27;./component/search-result/search-result.component&#x27;;
+
+const routes: Routes &#x3D; [
+  { path: &#x27;contactus&#x27;, component: ContactusComponent },
+  { path: &#x27;form-client&#x27;, component: FormClientComponent },
+  { path: &#x27;form-professional&#x27;, component: FormProfessionalComponent },
+  { path: &#x27;home&#x27;, component: HomeComponent },
+  { path: &#x27;login&#x27;, component: LoginComponent },
+  { path: &#x27;form-adm&#x27;, component: FormAdmComponent },
+  { path: &#x27;login-adm&#x27;, component: LoginAdmComponent },
+  { path: &#x27;initial&#x27;, component: InitialComponent },
+  { path: &#x27;logged-client&#x27;, component: LoggedClientComponent },
+  { path: &#x27;logged-professional&#x27;, component: LoggedProfessionalComponent },
+  { path: &#x27;about&#x27;, component: AboutComponent },
+  { path: &#x27;profile-professional/:idProfissional&#x27;, component: ProfileProfessionalComponent },
+  { path: &#x27;service-professional&#x27;, component: ServicesProfessionalComponent },
+  { path: &#x27;about-professional&#x27;, component: AboutProfessionalComponent },
+  { path: &#x27;comments&#x27;, component: CommentsComponent },
+  { path: &#x27;agenda&#x27;, component: ProfessionalScheduleComponent},
+  { path: &#x27;logged-professional&#x27;, component: LoggedProfessionalComponent},
+  { path:&#x27;about&#x27;,component:AboutComponent},
+  { path: &#x27;personal-data&#x27;, component: PersonalDataComponent},
+  { path: &#x27;schedule-time&#x27;, component: ScheduleTimeComponent},
+  { path: &#x27;search-result&#x27;, component:SearchResultComponent},
+
+  { path: &#x27;&#x27;, redirectTo: &#x27;/home&#x27;, pathMatch: &#x27;full&#x27; }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

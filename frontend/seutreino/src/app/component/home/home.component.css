@@ -1,0 +1,224 @@
+#home {
+    background-image: url(../../../assets/imagens/img1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: auto;
+
+  background-image: url(../../../assets/imagens/img1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: auto;
+
+}
+
+#aab {
+    overflow: auto;
+    max-height: 30em;
+  }
+
+#spacer {
+  height: 150px;
+  /* A mesma altura que você quer para a margem superior */
+  position: absolute;
+  /* Adicione esta linha */
+  width: 100%;
+  /* Adicione esta linha */
+  top: 0;
+  /* Adicione esta linha */
+}
+
+#container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.home-text {
+  justify-content: center;
+  align-self: center;
+  display: grid;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: black;
+  background: rgba(0, 0, 0, 0.3);
+  /* margin-top: 150px; */
+  transform: translateY(20vh);
+}
+
+.home-text2 {
+  justify-content: center;
+  align-self: center;
+  display: grid;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: black;
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateY(40vh);
+  margin: 0px;
+}
+
+.home-text2 h4 {
+  font-size: 20px;
+  margin-bottom: 0px;
+  padding: 20px 0;
+}
+
+#home input {
+  margin: 30px;
+  width: 300px;
+  background-color: #dbdbdb;
+  border-color: transparent;
+  outline: transparent;
+  border-radius: 4px;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+#home h5,
+h4 {
+  color: #fff;
+}
+
+.btn {
+  background-color: #F28A2E;
+  border-color: transparent;
+  color: white;
+  border-radius: 4px;
+  padding: 10px 35px;
+}
+
+.btn:hover {
+  background-color: #F28A2E;
+  border-color: transparent;
+  color: white;
+  border-radius: 4px;
+  padding: 10px 35px;
+  opacity: 0.8;
+}
+
+.btn-div {
+  margin: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h5 {
+  font-size: calc(1em + 1vw);
+}
+
+
+h5#ask {
+  padding-top: 30px;
+}
+
+@media (max-width: 990px) {
+  .home-text2 {
+    display: none;
+  }
+}
+
+/* componente de anuncio */
+.announcement {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.description-announcement {
+  background-color: #F28A2E;
+}
+
+.btn-ver {
+  margin-top: 16%;
+}
+
+.teste-1 {
+  background-color: #2C2C2C;
+  color: white;
+}
+
+div .day-date {
+  text-align: center;
+  /* Alinhe o texto ao centro */
+  margin: 0 1px;
+  /* Adicione margem interna para espaçamento entre os dias e datas */
+  color: white;
+  font-size: 10px;
+}
+
+div .day-date :is(h4, h5) {
+  font-size: 16px;
+}
+
+.hours {
+  text-align: center;
+  margin: 0 2px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  padding: 0.2em;
+  margin: 0 1% 0 0;
+}
+
+.hours:hover {
+  background-color: #F28A2E;
+
+}
+
+
+.col-2 {
+  width: calc(16.66667% - 4px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  .description {
+    background-color: #F28A2E;
+  }
+
+  .button {
+    margin-top: 16%;
+  }
+
+  .teste{
+    background-color: #2C2C2C;
+    color: white;
+  }
+  .day-date{
+    text-align: center; /* Alinhe o texto ao centro */
+    margin: 0 0px; /* Adicione margem interna para espaçamento entre os dias e datas */
+    color: white;
+  }
+  .hours{
+    text-align: center;
+    margin: 0 2px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    padding: 0.2em;
+    margin: 0 1% 0 0;
+  }
+  .hours:hover{
+    background-color: #F28A2E;
+
+  }
+
+
+    .col-2 {
+      width: calc(16.66667% - 4px);
+    }
+
+
+
+

@@ -1,0 +1,46 @@
+.container {
+  justify-content: center;
+  align-self: center;
+  display: grid;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: black;
+  background: rgba(0, 0, 0, 0.3);
+  align-content: center;
+}
+/*
+.contactus{
+
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  width: auto;
+}
+*/
+
+section#contactus {
+background-repeat: no-repeat;
+background-position: center;
+background-image: url(../../../assets/imagens/contactus.png);
+}
+
+::selection {
+background: #fed136;
+text-shadow: none;
+}
+
+@media (min-width: 768px ){
+section {
+  padding: 150px 0;
+}
+}
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+

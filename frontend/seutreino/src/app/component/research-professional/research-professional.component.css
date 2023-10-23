@@ -1,0 +1,48 @@
+.announcement {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.description-announcement {
+  background-color: #F28A2E;
+}
+
+.btn-ver {
+  margin-top: 16%;
+}
+
+.teste-1{
+  background-color: #2C2C2C;
+  color: white;
+}
+.day-date{
+  text-align: center; /* Alinhe o texto ao centro */
+  margin: 0 1px; /* Adicione margem interna para espaçamento entre os dias e datas */
+  color: white;
+}
+.hours{
+  text-align: center;
+  margin: 0 2px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  padding: 0.2em;
+  margin: 0 1% 0 0;
+}
+.hours:hover{
+  background-color: #F28A2E;
+
+}
+.hours:hover{
+  background-color: #F28A2E;
+
+}
+
+
+
+  /* .col-2 {
+    width: calc(16.66667% - 4px);
+  } */
+
+
+
+

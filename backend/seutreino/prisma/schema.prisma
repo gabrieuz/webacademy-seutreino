@@ -1,0 +1,251 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Gender {
+  M
+  F
+}
+
+enum State {
+  AC
+  AL
+  AP
+  AM
+  BA
+  CE
+  DF
+  ES
+  GO
+  MA
+  MT
+  MS
+  MG
+  PA
+  PB
+  PR
+  PE
+  PI
+  RJ
+  RN
+  RS
+  RO
+  RR
+  SC
+  SP
+  SE
+  TO
+}
+
+enum Day {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+enum Role {
+  CLIENT
+  PROFESSIONAL
+  ADM
+}
+
+model Client {
+  id                 String               @id @default(cuid())
+  name               String
+  email              String               @unique
+  password           String
+  gender             Gender
+  birthDate          DateTime
+  cep                String
+  street             String
+  state              State
+  city               String
+  phone              String
+  profilePicture     String?
+  socialMedia        Json?
+  role               Role                 @default(CLIENT)
+  isActive           Boolean              @default(true)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  professionalReview ProfessionalReview[]
+  appointments       Appointment[]
+
+  @@index([email])
+}
+
+model Professional {
+  id                 String               @id @default(cuid())
+  name               String
+  email              String               @unique
+  password           String
+  gender             String
+  birthDate          DateTime
+  cep                String
+  street             String
+  state              State
+  city               String
+  phone              String
+  profilePicture     String?
+  socialMedia        Json?
+  role               Role                 @default(PROFESSIONAL)
+  isActive           Boolean              @default(true)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  announcements      Announcement[]
+  professionalReview ProfessionalReview[]
+  appointments       Appointment[]
+  availableTimes       AvailableTimes[]
+
+  @@index([email])
+}
+
+model Administrator {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Announcement {
+  id             String         @id @default(cuid())
+  title          String
+  description    String
+  price          Float
+  isActive       Boolean        @default(true)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  professional   Professional   @relation(fields: [professionalId], references: [id])
+  professionalId String
+  expiredAt      DateTime
+  cep            String
+  street         String
+  state          State
+  city           String
+  gallery        Gallery[]
+  announcementAvailableTimes   AnnouncementAvailableTime[]
+  profession     Profession     @relation(fields: [professionId], references: [id])
+  professionId   String
+  expertises      Expertise[]
+  levels          Level[]
+}
+
+model AnnouncementAvailableTime {
+  id             String       @id @default(cuid())
+  day            Day
+  hour           String
+  isAvaible      Boolean      @default(true)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  announcement   Announcement @relation(fields: [announcementId], references: [id])
+  announcementId String
+}
+
+// Horários disponíveis para atendimento, por dia da semana (Os que ficam no anuncio).
+model AvailableTimes {
+  id             String       @id @default(cuid())
+  day            Day
+  hour           String
+  isAvaible      Boolean      @default(true)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  professional   Professional @relation(fields: [professionalId], references: [id])
+  professionalId String
+}
+
+// Níveis de experiência do cliente (Iniciante, Intermediário, Avançado, etc).
+model Level {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  announcements Announcement[]
+}
+
+// Galeria de imagens do anúncio.
+model Gallery {
+  id             String       @id @default(cuid())
+  url            String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  announcement   Announcement @relation(fields: [announcementId], references: [id])
+  announcementId String
+}
+
+model Profession {
+  id        String      @id @default(cuid())
+  name      String
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  announcements Announcement[]
+}
+
+// Especialidades de uma profissão.
+model Expertise {
+  id           String     @id @default(cuid())
+  name         String
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  announcements Announcement[]
+}
+
+model ProfessionalReview {
+  id             String       @id @default(cuid())
+  rating         Int // Avaliação em estrelas (1 a 5, por exemplo)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  clientId       String // ID do cliente que deu a avaliação
+  client         Client       @relation(fields: [clientId], references: [id])
+  professionalId String // ID do profissional avaliado
+  professional   Professional @relation(fields: [professionalId], references: [id])
+  tags           Tag[]
+}
+
+model Tag {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  reviews   ProfessionalReview[]
+}
+
+enum Status {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+model Appointment {
+  id             String       @id @default(cuid())
+  date           DateTime
+  day            Day
+  hour           String
+  justificative  String?
+  status         Status       @default(PENDING)
+  clientId       String
+  professionalId String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  client         Client       @relation(fields: [clientId], references: [id])
+  professional   Professional @relation(fields: [professionalId], references: [id])
+}
+
+model Contactus {
+  id String @id @default(cuid())
+  name String
+  email String
+  phone String
+  role String
+  message String
+}

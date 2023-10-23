@@ -1,0 +1,39 @@
+<app-navbaroff></app-navbaroff>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow mt-5 mb-5">
+                <div class="mt-3">
+                    <h2 class="text-center">Cadastro do Administrador</h2>
+                </div>
+                <div class="card-body">
+                    <form (ngSubmit)="submit(form)" #form="ngForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" placeholder="Digite seu nome"
+                                [(ngModel)]="record.name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email"
+                                [(ngModel)]="record.email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha"
+                                [(ngModel)]="record.password" name="password" require>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" type="submit" [disabled]="isSubmiting">
+                                <span *ngIf="!isSubmiting">Cadastrar</span>
+                                <span *ngIf="isSubmiting">
+                                  <i class="fa-solid fa-dumbbell fa-bounce"></i>
+                                </span>
+                              </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

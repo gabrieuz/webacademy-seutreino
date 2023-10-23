@@ -1,0 +1,48 @@
+<div class="container mb-3" id="main">
+  <div class="container">
+    <p class="text-center mt-4" *ngIf="listProfessionalReview.length <= 0">Nenhum comentário!</p>
+    <div *ngFor="let professionalReview of listProfessionalReview" class="listComents">
+      <div class="comment mt-3">
+        <h4>{{professionalReview?.client?.name}}</h4>
+        <span *ngFor="let tag of professionalReview.tags" class="tag">
+          {{tag.name}}
+        </span>
+        <br>
+        <p-rating [(ngModel)]="professionalReview.rating" [cancel]="false" [disabled]="true">
+
+          <ng-template pTemplate="onicon">
+            <img src="../../../assets/img/Star 4.svg" width="25px" height="25px" />
+          </ng-template>
+          <ng-template pTemplate="officon">
+            <img src="../../../assets/img/Star 1.svg" width="25px" height="25px" />
+          </ng-template>
+        </p-rating>
+      </div>
+    </div>
+    <div class="tags" *ngIf="userLog?.role == 'CLIENT'">
+      <h4>Conte-nos um pouco da sua experiência:</h4>
+      <div class="btn-group">
+        <button *ngFor="let tag of tags" type="button" class="btn p-1 m-1" [class.btn-primary]="tag.selected" [class.btn-outline-primary]="!tag.selected" (click)="toggleTagSelection(tag)">
+          {{ tag.name }}
+        </button>
+      </div>
+      <div class="rating">
+        Avaliação:
+        <div class="card flex justify-content-center">
+          <p-rating [(ngModel)]="value" [cancel]="false">
+
+            <ng-template pTemplate="onicon">
+              <img src="../../../assets/img/Star 4.svg" width="25px" height="25px" />
+            </ng-template>
+            <ng-template pTemplate="officon">
+              <img src="../../../assets/img/Star 1.svg" width="25px" height="25px" />
+            </ng-template>
+          </p-rating>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success p-1 m-1" (click)="save()">
+        Postar
+      </button>
+    </div>
+  </div>
+</div>
